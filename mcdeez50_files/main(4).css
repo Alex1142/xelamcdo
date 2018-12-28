@@ -1,0 +1,292 @@
+.treasure-hunt-dialog .yui3-widget-hd.modal-header {
+  background: #303030;
+  color: white;
+  padding: 1% 5%; }
+
+.treasure-hunt-dialog .btn.close {
+  color: white;
+  font-size: 30px;
+  line-height: 100%;
+  box-shadow: none;
+  font-weight: normal;
+  opacity: 1; }
+
+.aui .treasure-hunt-display-portlet .treasure-hunt-display-wrapper {
+  display: none;
+  position: fixed;
+  bottom: 3%;
+  text-align: center;
+  z-index: 999; }
+
+.aui .treasure-hunt-display-portlet .treasure-hunt-item-display {
+  margin-top: 100px;
+  padding: 15%;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 90px;
+  width: 90px; }
+
+.aui .treasure-hunt-display-portlet .treasure-hunt-item-display img {
+  height: 64px;
+  width: 64px; }
+
+/* Modal Styles */
+.aui .treasure-hunt-display-portlet #treasure-hunt-catched-modal .yui3-widget-hd.modal-header {
+  background: #303030;
+  color: #8E8E8E;
+  padding: 2%; }
+
+.aui .treasure-hunt-display-portlet #treasure-hunt-catched-modal .yui3-widget-hd.modal-header button {
+  color: #8E8E8E;
+  opacity: 1;
+  margin: 0;
+  text-shadow: 0 0 0 white;
+  font-weight: normal;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none; }
+
+.aui .treasure-hunt-display-portlet .portlet-body {
+  text-align: center; }
+
+.aui .treasure-hunt-display-portlet .progress-number {
+  text-align: right;
+  color: #9c3e6e; }
+
+.aui .treasure-hunt-display-portlet .progress-container {
+  height: 5px;
+  position: relative;
+  background: #f4ebf0;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.aui .treasure-hunt-display-portlet .progress-bar {
+  display: block;
+  height: 100%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: #9c3e6e;
+  position: relative;
+  overflow: hidden; }
+
+.aui .treasure-hunt-display-portlet .icon-treasure {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  margin-top: 20px; }
+
+.aui .treasure-hunt-display-portlet .treasure-button {
+  height: 50px;
+  background-color: #9c3e6e;
+  color: #fff;
+  width: 100%;
+  position: inherit;
+  border: none;
+  margin-top: 20px;
+  font-size: medium; }
+
+.aui .treasure-hunt-display-portlet .treasure-button-unstyled {
+  height: 50px;
+  background-color: #fff;
+  color: #973366;
+  width: 100%;
+  position: inherit;
+  border: none;
+  margin-top: 20px;
+  font-size: medium; }
+
+/* END Modal Styles */
+.animate1 {
+  -webkit-animation: pulsejg1 4s linear infinite;
+  -moz-animation: pulsejg1 4s linear infinite;
+  animation: pulsejg1 4s linear infinite; }
+
+.animate2 {
+  -webkit-animation: pulsejg2 4s linear infinite;
+  -moz-animation: pulsejg2 4s linear infinite;
+  animation: pulsejg2 4s linear infinite; }
+
+/* Pulse Styles */
+.aui .treasure-hunt-display-portlet .treasure-hunt-item-display .pulse1 {
+  position: fixed;
+  width: 128px;
+  height: 128px;
+  margin-top: -33px;
+  z-index: -1;
+  opacity: 0;
+  -webkit-border-radius: 999px;
+  -moz-border-radius: 999px;
+  border-radius: 999px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.aui .treasure-hunt-display-portlet .treasure-hunt-item-display .pulse2 {
+  position: fixed;
+  width: 128px;
+  height: 128px;
+  margin-top: -33px;
+  z-index: -1;
+  opacity: 0;
+  -webkit-border-radius: 999px;
+  -moz-border-radius: 999px;
+  border-radius: 999px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* Pulse Animations */
+@-webkit-keyframes pulsejg1 {
+  0% {
+    -webkit-transform: scale(0.6);
+    opacity: 0; }
+
+  50% {
+    -webkit-transform: scale(0.6);
+    opacity: 0; }
+
+  60% {
+    -webkit-transform: scale(0.9);
+    opacity: .35; }
+
+  70% {
+    -webkit-transform: scale(1.1);
+    opacity: .50; }
+
+  80% {
+    -webkit-transform: scale(1.25);
+    opacity: .35; }
+
+  100% {
+    -webkit-transform: scale(1.4);
+    opacity: 0; } }
+
+@-moz-keyframes pulsejg1 {
+  0% {
+    -moz-transform: scale(0.6);
+    opacity: 0; }
+
+  50% {
+    -moz-transform: scale(0.6);
+    opacity: 0; }
+
+  60% {
+    -moz-transform: scale(0.9);
+    opacity: .35; }
+
+  70% {
+    -moz-transform: scale(1.1);
+    opacity: .50; }
+
+  80% {
+    -moz-transform: scale(1.25);
+    opacity: .35; }
+
+  100% {
+    -moz-transform: scale(1.4);
+    opacity: 0; } }
+
+@keyframes pulsejg1 {
+  0% {
+    transform: scale(0.6);
+    opacity: 0; }
+
+  50% {
+    transform: scale(0.6);
+    opacity: 0; }
+
+  60% {
+    transform: scale(0.9);
+    opacity: .35; }
+
+  70% {
+    transform: scale(1.1);
+    opacity: .50; }
+
+  80% {
+    transform: scale(1.25);
+    opacity: .2; }
+
+  100% {
+    transform: scale(1.4);
+    opacity: 0; } }
+
+@-webkit-keyframes pulsejg2 {
+  0% {
+    -webkit-transform: scale(0.6);
+    opacity: 0; }
+
+  40% {
+    -webkit-transform: scale(0.8);
+    opacity: 0; }
+
+  50% {
+    -webkit-transform: scale(1);
+    opacity: .3; }
+
+  60% {
+    -webkit-transform: scale(1.1);
+    opacity: .5; }
+
+  80% {
+    -webkit-transform: scale(1.2);
+    opacity: .3; }
+
+  100% {
+    -webkit-transform: scale(1.3);
+    opacity: 0; } }
+
+@-moz-keyframes pulsejg2 {
+  0% {
+    -moz-transform: scale(0.6);
+    opacity: 0; }
+
+  40% {
+    -moz-transform: scale(0.8);
+    opacity: 0; }
+
+  50% {
+    -moz-transform: scale(1);
+    opacity: .3; }
+
+  60% {
+    -moz-transform: scale(1.1);
+    opacity: .5; }
+
+  80% {
+    -moz-transform: scale(1.2);
+    opacity: .3; }
+
+  100% {
+    -moz-transform: scale(1.3);
+    opacity: 0; } }
+
+@keyframes pulsejg2 {
+  0% {
+    transform: scale(0.6);
+    opacity: 0; }
+
+  40% {
+    transform: scale(0.8);
+    opacity: 0; }
+
+  50% {
+    transform: scale(1);
+    opacity: .3; }
+
+  60% {
+    transform: scale(1.1);
+    opacity: .5; }
+
+  80% {
+    transform: scale(1.2);
+    opacity: .3; }
+
+  100% {
+    transform: scale(1.3);
+    opacity: 0; } }

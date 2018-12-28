@@ -1,0 +1,90 @@
+$( document ).ready(function() {
+	
+	//take the value of the width of main and body
+	loadTreasures();
+
+});
+
+
+function loadTreasures() {
+	var main = $("#main").width();
+	var ventana = $('body').width();
+	
+	//call to the function
+	setTreasurePosition(ventana, main);
+	
+	//Add class with animations to the pulses
+  $( ".aui .treasure-hunt-display-portlet .treasure-hunt-item-display .pulse1" ).addClass('animate1');
+  $( ".aui .treasure-hunt-display-portlet .treasure-hunt-item-display .pulse2" ).addClass('animate2');
+
+  $( ".treasure-hunt-display-wrapper" ).css("display", "block");
+}
+
+
+window.onresize = function(event) {
+	
+	//take the value of the width of main and body
+	var main = $("#main").width();
+	var ventana = $('body').width();
+	
+	//call to the function
+	setTreasurePosition(ventana, main);
+};
+
+function setTreasurePosition(ventana, main){
+	
+	//calculate the margin
+	var margin_pulse = ((ventana - main) / 2) + 20;
+	var margin_wrapper = margin_pulse + 17;
+	
+	//add css  
+	$( ".treasure-hunt-display-wrapper" ).css("right", margin_wrapper+"px");
+	$( ".aui .treasure-hunt-display-portlet .treasure-hunt-item-display .pulse1" ).css("right", margin_pulse+"px");	
+	$( ".aui .treasure-hunt-display-portlet .treasure-hunt-item-display .pulse2" ).css("right", margin_pulse+"px");
+}
+
+function treasureCatched(userId,thId, url, type,thTitle,preview,congratulations){
+		AUI()
+				.use(
+						'aui-base',
+						'liferay-util-window',
+						'liferay-portlet-url',
+						'aui-node',
+						'aui-io-plugin-deprecated',
+						function(A) {
+							var url = Liferay.PortletURL.createRenderURL();
+							url.setPortletId("treasurehuntdisplayportlet_WAR_treasurehuntportlet");
+							url.setWindowState('pop_up');
+							url.setParameter("lifecycle", "0");
+							url.setParameter("jspPage", "/html/display/content.jsp");
+							url.setParameter("userId",userId);
+							url.setParameter("treasureHuntItemId",thId);
+							url.setParameter("preview",preview);
+							url.setParameter("congratulations",congratulations);
+
+							popUpWindow = Liferay.Util.Window.getWindow({
+								dialog : {
+									centered : true,
+									constrain2view : true,
+									modal : true,
+									cssClass: 'treasure-hunt-dialog',
+									resizable : false,
+									draggable: false,
+									destroyOnHide:true,
+									width : 360,
+									height: 520,
+									after: {
+										destroy: function(event) {
+											window.parent.refreshTreasures();
+										}
+									}
+								}
+							}).plug(A.Plugin.DialogIframe, {
+								autoLoad : true,
+								iframeCssClass : 'treasure-hunt-dialog-iframe',
+								uri : url
+							}).render();
+							popUpWindow.show();
+							popUpWindow.titleNode.html("<h4 id='treasure-hunt-header-title'>"+thTitle+"</h4>");
+						});
+}
